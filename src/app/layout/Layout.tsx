@@ -79,7 +79,7 @@ export const Layout = () => {
               <List>
                 {navlinks.map((nav, index) => (
                   <ListItem key={index} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick={() => handleClickMenu(nav.nav)}>
                       <ListItemIcon>{<nav.icon />}</ListItemIcon>
                       <ListItemText>{nav.nav.toUpperCase()}</ListItemText>
                     </ListItemButton>
