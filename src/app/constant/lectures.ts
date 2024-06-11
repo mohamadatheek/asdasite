@@ -1,0 +1,21 @@
+export const Lectures = [
+  { name: "Riyas MAM", degree: "Bsc(Hons), PGDE", subject: "Physics" },
+  { name: "Hijas", degree: "Bsc(Hons), PGDE", subject: "Physics" },
+  { name: "Santhirapragasam", degree: "Bsc, Msc, MEd", subject: "Physics" },
+  { name: "Jesliya Inamullah ND", degree: "Bsc.Eng(Hons)", subject: "Physics" },
+  { name: "Zanhar MTM", degree: "Bsc, PGDE", subject: "Chemistry" },
+  { name: "Irshad MSM", degree: "Bsc In Agri", subject: "Chemistry" },
+  { name: "Hafis MIM", degree: "Bsc In Env.Sci", subject: "Chemistry" },
+  { name: "Riswan MFM", degree: "Bsc(Hons), PGDE, Msc", subject: "Chemistry" },
+  { name: "Ilmiya AR", degree: "Bsc(Hons)", subject: "Chemistry" },
+  { name: "Mifra ACF", degree: "Bsc(Hons)", subject: "Chemistry" },
+  { name: "Miskeen AL", degree: "Bsc, PGDE", subject: "Biology" },
+  { name: "Shakeel HMM", degree: "Bsc, PGDE", subject: "Biology" },
+  { name: "Rajeena MYS", degree: "Bsc, PGDE", subject: "Biology" },
+  { name: "Risna AF", degree: "Bsc, PGDE", subject: "Biology" },
+
+  { name: "Pathmanathan A", degree: "Msc", subject: "Combined Maths" },
+  { name: "Nowsath A", degree: "Bsc", subject: "Combined Maths" },
+  { name: "Siyath ASA", degree: "Bsc in Com.Sci", subject: "Combined Maths" },
+  { name: "Asliha MUF", degree: "Bsc", subject: "Combined Maths" },
+];
