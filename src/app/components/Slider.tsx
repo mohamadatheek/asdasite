@@ -40,7 +40,6 @@ export const Slider: React.FC<Props> = (props) => {
     setInProp(true);
   };
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       setDirection("left");
@@ -50,9 +49,15 @@ export const Slider: React.FC<Props> = (props) => {
     return () => clearInterval(interval);
   }, []);
 
-  
   return (
     <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <Box textAlign={"center"}>
+          <Typography variant="h3" fontFamily={"Archivo Narrow"}>
+            Best Performers - 2024 -
+          </Typography>
+        </Box>
+      </Grid>
       <Grid item xs={12}>
         <Box p={3} {...handlers}>
           <Slide

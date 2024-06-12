@@ -35,6 +35,8 @@ import { BestPerformermers } from "./home/BestPerformars";
 import { Slider } from "./components/Slider";
 import { Performers } from "./constant/Performers";
 import { useBreakpointUp } from "./constant/MediaQuery";
+import { TestiSlider } from "./components/TestiSlider";
+import { Testimonies } from "./constant/Testimoney";
 
 const StyledCenterBox = styled(Box)`
   display: flex;
@@ -82,7 +84,7 @@ export const Home = () => {
         </Grid>
         <Grid item xs={12}>
           <Box px={5} py={20} bgcolor={"#1975d4"} color={"white"}>
-            <Grid container spacing={2}>
+            <Grid container spacing={matches ? 2 : 8}>
               <Grid item xs={12} md={4}>
                 <StyledCenterBox>
                   <Typography variant="h2" fontWeight={"bold"}>
@@ -123,7 +125,11 @@ export const Home = () => {
           <ResultSummery />
         </Grid>
         <Grid item xs={12}>
-          <Testimonials />
+          {matches ? (
+            <Testimonials />
+          ) : (
+            <TestiSlider Testimonials={Testimonies} />
+          )}
         </Grid>
       </Grid>
     </Fragment>

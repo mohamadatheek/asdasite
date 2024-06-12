@@ -1,4 +1,10 @@
-export const Testimonies = [
+export interface Testimonials {
+  student_name: string;
+  feedback: string;
+  rating: number;
+}
+
+export const Testimonies: Testimonials[] = [
   {
     student_name: "Samantha Perera",
     feedback:

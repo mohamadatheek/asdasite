@@ -5,8 +5,11 @@ import {
 } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
 import { Fragment } from "react/jsx-runtime";
+import { useBreakpointUp } from "../constant/MediaQuery";
 
 export const Streams = () => {
+  const matches = useBreakpointUp("md");
+
   return (
     <Fragment>
       <Box display={"flex"} flexDirection={"column"} gap={10}>
@@ -33,7 +36,7 @@ export const Streams = () => {
                 </Box>
                 <Box>
                   <Typography
-                    variant="h3"
+                    variant={matches ? "h3" : "h4"}
                     fontFamily={"Roboto Condensed"}
                     textAlign={"center"}
                   >
@@ -53,7 +56,10 @@ export const Streams = () => {
                   <CalculateOutlined sx={{ fontSize: 100 }} />
                 </Box>
                 <Box>
-                  <Typography variant="h3" fontFamily={"Roboto Condensed"}>
+                  <Typography
+                    variant={matches ? "h3" : "h4"}
+                    fontFamily={"Roboto Condensed"}
+                  >
                     Physical Science
                   </Typography>
                 </Box>
@@ -70,7 +76,10 @@ export const Streams = () => {
                   <ComputerOutlined sx={{ fontSize: 100 }} />
                 </Box>
                 <Box>
-                  <Typography variant="h3" fontFamily={"Roboto Condensed"}>
+                  <Typography
+                    variant={matches ? "h3" : "h4"}
+                    fontFamily={"Roboto Condensed"}
+                  >
                     Technology
                   </Typography>
                 </Box>
