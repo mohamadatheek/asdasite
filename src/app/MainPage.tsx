@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Layout } from "./layout/Layout";
 import { AboutUs } from "./AboutUs";
 import { Home } from "./Home";
@@ -7,6 +7,9 @@ import { Students } from "./Students";
 import { News } from "./News";
 import { Contactus } from "./Contactus";
 import { styled } from "@mui/material";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
+
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -17,6 +20,11 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export const MainPage = () => {
+  const location = useLocation();
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+  
   const renderRoutes = () => (
     <Routes>
       <Route path={"home"} element={<Home />} />
