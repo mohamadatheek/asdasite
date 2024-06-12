@@ -125,12 +125,9 @@ export const Home = () => {
           <ResultSummery />
         </Grid>
         <Grid item xs={12}>
-          {matches ? (
-            <Testimonials />
-          ) : (
-            <TestiSlider Testimonials={Testimonies} />
-          )}
+          {matches ? <Testimonials /> : <TestiSlider  Testimonials={Testimonies}/>}
         </Grid>
+        <Grid item xs={12}></Grid>
       </Grid>
     </Fragment>
   );

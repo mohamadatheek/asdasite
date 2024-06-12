@@ -11,7 +11,10 @@ import {
 import { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { Testimonials } from "../constant/Testimoney";
-
+import {
+  FiberManualRecordOutlined,
+  FiberManualRecord,
+} from "@mui/icons-material";
 
 interface Props {
   Testimonials: Testimonials[];
@@ -65,7 +68,7 @@ export const TestiSlider: React.FC<Props> = (props) => {
       </Grid>
 
       <Grid item xs={12}>
-        <Box p={3} {...handlers}>
+        <Box p={3} {...handlers} overflow={"hidden"}>
           <Slide
             direction={direction === "left" ? "left" : "right"}
             in={inProp}
@@ -111,6 +114,21 @@ export const TestiSlider: React.FC<Props> = (props) => {
               </Box>
             </Card>
           </Slide>
+        </Box>
+        <Box display={"flex"} justifyContent={"center"}>
+          {Testimonials.map((p, i) => (
+            <>
+              {i === currentIndex ? (
+                <FiberManualRecordOutlined />
+              ) : (
+                <FiberManualRecord
+                  onClick={() => {
+                    setCurrentIndex(i);
+                  }}
+                />
+              )}
+            </>
+          ))}
         </Box>
       </Grid>
     </Grid>

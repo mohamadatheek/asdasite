@@ -59,7 +59,7 @@ export const Slider: React.FC<Props> = (props) => {
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Box p={3} {...handlers}>
+        <Box p={3} {...handlers} overflow={"hidden"}>
           <Slide
             direction={direction === "left" ? "left" : "right"}
             in={inProp}
